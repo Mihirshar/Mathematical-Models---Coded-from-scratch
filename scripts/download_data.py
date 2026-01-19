@@ -2,10 +2,10 @@
 """Script to download common datasets."""
 
 import argparse
-from pathlib import Path
-import urllib.request
 import gzip
 import shutil
+import urllib.request
+from pathlib import Path
 
 
 def download_mnist(data_dir: Path) -> None:
@@ -18,10 +18,10 @@ def download_mnist(data_dir: Path) -> None:
         "t10k-images-idx3-ubyte.gz",
         "t10k-labels-idx1-ubyte.gz",
     ]
-    
+
     mnist_dir = data_dir / "raw" / "mnist"
     mnist_dir.mkdir(parents=True, exist_ok=True)
-    
+
     for file in files:
         url = base_url + file
         filepath = mnist_dir / file
@@ -29,10 +29,10 @@ def download_mnist(data_dir: Path) -> None:
             print(f"Downloading {file}...")
             urllib.request.urlretrieve(url, filepath)
             # Uncompress
-            with gzip.open(filepath, 'rb') as f_in:
-                with open(filepath.with_suffix(''), 'wb') as f_out:
+            with gzip.open(filepath, "rb") as f_in:
+                with open(filepath.with_suffix(""), "wb") as f_out:
                     shutil.copyfileobj(f_in, f_out)
-    
+
     print("MNIST download complete!")
 
 
@@ -43,17 +43,14 @@ def main():
         type=str,
         default="mnist",
         choices=["mnist", "cifar10", "imdb"],
-        help="Dataset to download"
+        help="Dataset to download",
     )
     parser.add_argument(
-        "--data-dir",
-        type=Path,
-        default=Path("data"),
-        help="Data directory"
+        "--data-dir", type=Path, default=Path("data"), help="Data directory"
     )
-    
+
     args = parser.parse_args()
-    
+
     if args.dataset == "mnist":
         download_mnist(args.data_dir)
     else:

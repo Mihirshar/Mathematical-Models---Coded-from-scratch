@@ -1,7 +1,7 @@
 """NumPy Core - Usage Examples."""
 
 import numpy as np
-from implementation import create_arrays, array_operations
+from implementation import array_operations, create_arrays
 
 
 def example_array_creation():
