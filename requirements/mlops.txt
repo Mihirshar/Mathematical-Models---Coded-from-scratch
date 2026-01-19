@@ -1,0 +1,4 @@
+# MLOps tools
+mlflow>=2.5.0
+wandb>=0.15.0
+dvc>=3.0.0

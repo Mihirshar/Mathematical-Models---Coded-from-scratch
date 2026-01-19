@@ -1,0 +1,6 @@
+# NLP and Generative AI
+transformers>=4.30.0
+datasets>=2.14.0
+tokenizers>=0.13.0
+accelerate>=0.20.0
+sentencepiece>=0.1.99

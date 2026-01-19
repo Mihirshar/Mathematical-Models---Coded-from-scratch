@@ -1,0 +1,11 @@
+{
+  "model_name": "simple_nn",
+  "architecture": {
+    "input_size": 784,
+    "hidden_layers": [128, 64],
+    "output_size": 10,
+    "activation": "relu",
+    "dropout": 0.2
+  },
+  "initialization": "xavier"
+}

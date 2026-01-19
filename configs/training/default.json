@@ -1,0 +1,15 @@
+{
+  "batch_size": 32,
+  "epochs": 50,
+  "learning_rate": 0.001,
+  "optimizer": "adam",
+  "loss_function": "cross_entropy",
+  "early_stopping": {
+    "patience": 5,
+    "min_delta": 0.001
+  },
+  "checkpoint": {
+    "save_best_only": true,
+    "monitor": "val_loss"
+  }
+}
