@@ -1,4 +1,5 @@
 """Pytest configuration and fixtures."""
+
 import pytest
 import numpy as np
 
