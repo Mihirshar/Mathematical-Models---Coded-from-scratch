@@ -1,6 +1,6 @@
 """Python Basics - Usage Examples."""
 
-from implementation import demonstrate_variables, demonstrate_control_flow
+from implementation import demonstrate_control_flow, demonstrate_variables
 
 
 def example_variables():

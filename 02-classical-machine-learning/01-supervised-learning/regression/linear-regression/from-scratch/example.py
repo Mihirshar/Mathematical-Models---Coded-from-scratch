@@ -7,16 +7,16 @@ from implementation import LinearRegressionScratch
 def example_simple_regression():
     """Example: Simple linear regression."""
     print("Example: Simple Linear Regression")
-    
+
     # Generate sample data
     # TODO: Add data generation
-    
+
     # Create and train model
     # TODO: Add model training
-    
+
     # Make predictions
     # TODO: Add predictions
-    
+
     pass
 
 
