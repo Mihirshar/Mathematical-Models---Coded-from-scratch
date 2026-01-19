@@ -8,13 +8,13 @@ from torch.utils.data import DataLoader, TensorDataset
 
 class SimpleNN(nn.Module):
     """Simple feedforward neural network."""
-    
+
     def __init__(self, input_size: int, hidden_size: int, output_size: int):
         super().__init__()
         self.fc1 = nn.Linear(input_size, hidden_size)
         self.relu = nn.ReLU()
         self.fc2 = nn.Linear(hidden_size, output_size)
-    
+
     def forward(self, x):
         x = self.fc1(x)
         x = self.relu(x)
@@ -26,21 +26,21 @@ def main():
     """Train a simple neural network."""
     print("Neural Network Example")
     print("=" * 50)
-    
+
     # Generate sample data
     torch.manual_seed(42)
     X = torch.randn(1000, 10)
     y = torch.randn(1000, 1)
-    
+
     # Create dataset and dataloader
     dataset = TensorDataset(X, y)
     dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
-    
+
     # Initialize model
     model = SimpleNN(input_size=10, hidden_size=20, output_size=1)
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
-    
+
     # Training loop
     epochs = 10
     for epoch in range(epochs):
@@ -52,10 +52,10 @@ def main():
             loss.backward()
             optimizer.step()
             total_loss += loss.item()
-        
+
         avg_loss = total_loss / len(dataloader)
         print(f"Epoch [{epoch+1}/{epochs}], Loss: {avg_loss:.4f}")
-    
+
     print("\n✓ Neural network training completed!")
 
 

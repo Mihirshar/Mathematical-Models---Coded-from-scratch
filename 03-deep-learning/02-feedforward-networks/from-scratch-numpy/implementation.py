@@ -7,7 +7,7 @@ from typing import List, Tuple, Callable
 class NeuralNetworkScratch:
     """
     Feedforward Neural Network implemented from scratch.
-    
+
     Parameters:
     -----------
     layer_sizes : List[int]
@@ -16,15 +16,15 @@ class NeuralNetworkScratch:
         Learning rate for gradient descent
     activation : str
         Activation function ('relu', 'sigmoid', 'tanh')
-    
+
     TODO: Implement the full neural network
     """
-    
+
     def __init__(
         self,
         layer_sizes: List[int],
         learning_rate: float = 0.01,
-        activation: str = 'relu'
+        activation: str = "relu",
     ):
         """Initialize the neural network."""
         self.layer_sizes = layer_sizes
@@ -33,74 +33,70 @@ class NeuralNetworkScratch:
         self.weights = []
         self.biases = []
         self._initialize_parameters()
-    
+
     def _initialize_parameters(self) -> None:
         """
         Initialize weights and biases.
-        
+
         TODO: Implement Xavier/He initialization
         """
         pass
-    
+
     def forward(self, X: np.ndarray) -> np.ndarray:
         """
         Forward propagation.
-        
+
         Args:
             X: Input data
-        
+
         Returns:
             np.ndarray: Output predictions
-        
+
         TODO: Implement forward pass
         """
         pass
-    
+
     def backward(self, X: np.ndarray, y: np.ndarray) -> None:
         """
         Backward propagation.
-        
+
         Args:
             X: Input data
             y: True labels
-        
+
         TODO: Implement backpropagation
         """
         pass
-    
+
     def train(
-        self,
-        X: np.ndarray,
-        y: np.ndarray,
-        epochs: int = 100,
-        batch_size: int = 32
+        self, X: np.ndarray, y: np.ndarray, epochs: int = 100, batch_size: int = 32
     ) -> List[float]:
         """
         Train the neural network.
-        
+
         Args:
             X: Training data
             y: Training labels
             epochs: Number of epochs
             batch_size: Batch size
-        
+
         Returns:
             List[float]: Training loss history
-        
+
         TODO: Implement training loop
         """
         pass
-    
+
     def predict(self, X: np.ndarray) -> np.ndarray:
         """
         Make predictions.
-        
+
         Args:
             X: Input data
-        
+
         Returns:
             np.ndarray: Predictions
-        
+
         TODO: Implement prediction
         """
         pass

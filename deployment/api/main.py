@@ -10,11 +10,13 @@ app = FastAPI(title="ML Model API", version="1.0.0")
 
 class PredictionRequest(BaseModel):
     """Request model for predictions."""
+
     features: List[float]
 
 
 class PredictionResponse(BaseModel):
     """Response model for predictions."""
+
     prediction: float
     confidence: float
 
@@ -31,19 +33,17 @@ async def predict(request: PredictionRequest):
     try:
         # TODO: Load your model and make predictions
         features = np.array(request.features).reshape(1, -1)
-        
+
         # Dummy prediction
         prediction = float(np.random.randn())
         confidence = float(np.random.rand())
-        
-        return PredictionResponse(
-            prediction=prediction,
-            confidence=confidence
-        )
+
+        return PredictionResponse(prediction=prediction, confidence=confidence)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
