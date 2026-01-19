@@ -1,0 +1,13 @@
+﻿# intermediate
+
+This directory contains resources and implementations related to intermediate.
+
+## Contents
+
+Content will be added as the course progresses.
+
+## Learning Objectives
+
+- Understand key concepts in intermediate
+- Implement practical examples
+- Apply knowledge to real-world problems
