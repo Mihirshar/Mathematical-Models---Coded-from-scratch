@@ -5,7 +5,10 @@ import numpy as np
 
 
 def train_test_split(
-    X: np.ndarray, y: np.ndarray, test_size: float = 0.2, random_state: int = None
+    X: np.ndarray,
+    y: np.ndarray,
+    test_size: float = 0.2,
+    random_state: int = None,
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     """
     Split data into train and test sets.
