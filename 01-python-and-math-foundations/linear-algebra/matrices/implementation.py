@@ -1,7 +1,8 @@
 """Matrix Operations Implementation - Placeholder."""
 
-import numpy as np
 from typing import Any, Optional
+
+import numpy as np
 
 
 class MatrixOperations:

@@ -1,7 +1,8 @@
 """Neural Network from Scratch - Placeholder."""
 
+from typing import Callable, List, Tuple
+
 import numpy as np
-from typing import List, Tuple, Callable
 
 
 class NeuralNetworkScratch:

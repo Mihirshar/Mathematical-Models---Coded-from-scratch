@@ -1,6 +1,6 @@
 """Python Basics Implementation - Placeholder."""
 
-from typing import List, Dict, Any
+from typing import Any, Dict, List
 
 
 def demonstrate_variables() -> Dict[str, Any]:

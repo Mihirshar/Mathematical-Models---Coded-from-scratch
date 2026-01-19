@@ -1,7 +1,8 @@
 """Logistic Regression from Scratch Implementation - Placeholder."""
 
-import numpy as np
 from typing import Any, Optional
+
+import numpy as np
 
 
 class LogisticRegressionScratch:

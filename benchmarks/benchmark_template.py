@@ -1,8 +1,9 @@
 """Benchmark template for performance testing."""
 
 import time
-import numpy as np
 from typing import Callable, Dict
+
+import numpy as np
 
 
 def benchmark_function(func: Callable, *args, iterations: int = 100, **kwargs) -> Dict:
