@@ -2,10 +2,10 @@
 """Script to download common datasets."""
 
 import argparse
-from pathlib import Path
-import urllib.request
 import gzip
 import shutil
+import urllib.request
+from pathlib import Path
 
 
 def download_mnist(data_dir: Path) -> None:

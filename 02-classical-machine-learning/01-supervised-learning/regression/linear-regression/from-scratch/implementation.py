@@ -1,7 +1,8 @@
 """Linear Regression from Scratch - Placeholder."""
 
+from typing import Optional, Tuple
+
 import numpy as np
-from typing import Tuple, Optional
 
 
 class LinearRegressionScratch:

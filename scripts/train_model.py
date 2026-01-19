@@ -2,8 +2,8 @@
 """Template script for training models."""
 
 import argparse
-from pathlib import Path
 import json
+from pathlib import Path
 
 
 def train_model(config_path: Path, output_dir: Path) -> None:

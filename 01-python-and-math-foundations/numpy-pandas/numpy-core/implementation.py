@@ -1,7 +1,8 @@
 """NumPy Core Operations - Placeholder."""
 
+from typing import Tuple, Union
+
 import numpy as np
-from typing import Union, Tuple
 
 
 def create_arrays() -> dict:

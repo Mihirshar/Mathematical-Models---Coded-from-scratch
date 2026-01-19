@@ -1,9 +1,10 @@
 """FastAPI template for model serving."""
 
+from typing import List
+
+import numpy as np
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import numpy as np
-from typing import List
 
 app = FastAPI(title="ML Model API", version="1.0.0")
 
